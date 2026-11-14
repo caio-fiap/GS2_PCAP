@@ -31,17 +31,37 @@ GS2_PCAP/
     |-- base_conhecimento.json
 ```
 
+## Regra de pontuação
+A pergunta é normalizada (minúsculas, sem acentos e sem pontuações) e comparada com cada orientação:
+
+| Regra | Pontos |
+|---|:---:|
+| Palavra-chave da orientação aparece na pergunta | +3 |
+| Palavra da pergunta aparece no título | +1 |
+
+| Melhor pontuação | Resultado |
+|---|---|
+| 6 ou mais | Confiança **ALTA** |
+| 3 a 5 | Confiança **MÉDIA** |
+| Menos de 3 | "Não encontrei" e sugere outras palavras e categorias |
+
+(colocar exemplos depois)
+
 ## Fontes consultadas
-
-
+Cada orientação do JSON indica sua fonte oficial. Entre elas: 
+- portal gov.br
+- Receita Federal
+- Polícia Federal
+- TSE
 
 ## Teste com usuários
-
-
+- Pessoas testadas:
 
 ## Limitações
-
-
+- A busca é por regras. Não entende sentido, só palavras. Erros de digitação não combinam, e só funcionaria se existisse uma palavra-chave com a grafia errada. 
+- Responde apenas o que está na base. Como informações oficiais mudam ao decorrer do tempo, as informações eventualmente precisarão ser reconferidas. 
+- Os procedimentos variam por estado e município. O assistente orienta de forma geral.
+- Não é um canal oficial e não substitui o atendimento do órgão responsável. 
 
 ## Vídeo técnico
 (link)
