@@ -1,0 +1,123 @@
+[
+  {
+    "id": 1,
+    "categoria": "Documentos pessoais",
+    "titulo": "Tirar a segunda via do RG (carteira de identidade)",
+    "palavras_chave": ["rg", "identidade", "carteira de identidade", "segunda via do rg", "cin"],
+    "resposta": "A segunda via é pedida no órgão de identificação do seu estado. Em São Paulo, isso é feito nos postos do Poupatempo. Veja no site do seu estado se é preciso agendar.",
+    "documentos": ["Certidão de nascimento ou de casamento", "Comprovante de residência (se o posto pedir)", "Boletim de ocorrência, em caso de roubo ou furto (se o posto pedir)"],
+    "onde": "Posto de identificação do seu estado (em SP: Poupatempo)",
+    "fonte": "https://www.gov.br/pt-br/servicos",
+    "verificado_em": "12/11/2026"
+  },
+  {
+    "id": 2,
+    "categoria": "Documentos pessoais",
+    "titulo": "Fazer ou regularizar o CPF",
+    "palavras_chave": ["cpf", "cadastro de pessoa fisica", "regularizar cpf", "cpf irregular", "cpf pendente"],
+    "resposta": "O CPF é emitido pela Receita Federal. A inscrição e a consulta da situação podem ser feitas pelo site oficial da Receita Federal ou pelo portal gov.br.",
+    "documentos": ["Documento oficial com foto", "Título de eleitor, se tiver (a Receita pode pedir para confirmar os dados)"],
+    "onde": "Site da Receita Federal / portal gov.br",
+    "fonte": "https://www.gov.br/receitafederal/pt-br",
+    "verificado_em": "12/11/2026"
+  },
+  {
+    "id": 3,
+    "categoria": "Trabalho e benefícios",
+    "titulo": "Acessar a Carteira de Trabalho Digital",
+    "palavras_chave": ["carteira de trabalho", "ctps", "carteira digital", "trabalho digital", "carteira de trabalho digital"],
+    "resposta": "A Carteira de Trabalho Digital é acessada pelo aplicativo oficial, usando sua conta gov.br. Ela substitui a carteira de papel para consultar seus vínculos de trabalho.",
+    "documentos": ["CPF", "Conta gov.br (criada com seus dados)"],
+    "onde": "Aplicativo Carteira de Trabalho Digital",
+    "fonte": "https://www.gov.br/trabalho-e-emprego/pt-br",
+    "verificado_em": "13/11/2026"
+  },
+  {
+    "id": 4,
+    "categoria": "Cartório e certidões",
+    "titulo": "Pedir segunda via da certidão de nascimento",
+    "palavras_chave": ["certidao de nascimento", "certidao nascimento", "nascimento", "segunda via de certidao"],
+    "resposta": "A segunda via é pedida no Cartório de Registro Civil. Se você souber onde a pessoa foi registrada, peça lá. Também existe pedido online em portais oficiais de certidões.",
+    "documentos": ["Nome completo, data de nascimento e nomes dos pais", "Documento oficial com foto de quem está pedindo"],
+    "onde": "Cartório de Registro Civil ou portal oficial de certidões",
+    "fonte": "https://www.gov.br/pt-br/servicos",
+    "verificado_em": "12/11/2026"
+  },
+  {
+    "id": 5,
+    "categoria": "Cartório e certidões",
+    "titulo": "Pedir segunda via da certidão de casamento",
+    "palavras_chave": ["certidao de casamento", "certidao casamento", "casamento", "casei"],
+    "resposta": "A segunda via é pedida no cartório onde o casamento foi registrado, ou em portais oficiais de certidões.",
+    "documentos": ["Nome completo dos cônjuges e data do casamento", "Documento oficial com foto de quem está pedindo"],
+    "onde": "Cartório onde o casamento foi registrado ou portal oficial de certidões",
+    "fonte": "https://www.gov.br/pt-br/servicos",
+    "verificado_em": "13/11/2026"
+  },
+  {
+    "id": 6,
+    "categoria": "Cartório e certidões",
+    "titulo": "Pedir segunda via da certidão de óbito",
+    "palavras_chave": ["certidao de obito", "certidao obito", "obito", "falecimento", "faleceu"],
+    "resposta": "A segunda via é pedida no cartório onde o óbito foi registrado, ou em portais oficiais de certidões.",
+    "documentos": ["Nome completo e data do falecimento", "Documento oficial com foto de quem está pedindo"],
+    "onde": "Cartório onde o óbito foi registrado ou portal oficial de certidões",
+    "fonte": "https://www.gov.br/pt-br/servicos",
+    "verificado_em": "13/11/2026"
+  },
+  {
+    "id": 7,
+    "categoria": "Cartório e certidões",
+    "titulo": "Reconhecer firma ou autenticar cópia de documento",
+    "palavras_chave": ["reconhecer firma", "reconhecimento de firma", "autenticar copia", "autenticacao", "firma", "cartorio de notas"],
+    "resposta": "Esses serviços são feitos em Cartório de Notas. Pergunte ao cartório quais documentos levar, pois isso depende do tipo de documento.",
+    "documentos": ["Documento original (para autenticar cópia)", "Documento oficial com foto"],
+    "onde": "Cartório de Notas",
+    "fonte": "https://www.gov.br/pt-br/servicos",
+    "verificado_em": "13/11/2026"
+  },
+  {
+    "id": 8,
+    "categoria": "Passaporte e consulados",
+    "titulo": "Tirar o passaporte comum",
+    "palavras_chave": ["passaporte", "passaporte comum", "tirar passaporte", "policia federal", "pf"],
+    "resposta": "O passaporte é emitido pela Polícia Federal. O pedido começa no site da PF, com o preenchimento do formulário, o pagamento da taxa e o agendamento do atendimento.",
+    "documentos": ["Documento de identificação oficial com foto", "CPF", "Comprovante de pagamento da taxa (GRU)"],
+    "onde": "Site da Polícia Federal e posto de atendimento da PF",
+    "fonte": "https://www.gov.br/pf/pt-br/assuntos/passaporte",
+    "verificado_em": "09/11/2026"
+  },
+  {
+    "id": 9,
+    "categoria": "Passaporte e consulados",
+    "titulo": "Pedir ajuda ao consulado brasileiro no exterior",
+    "palavras_chave": ["consulado", "exterior", "perdi passaporte", "embaixada", "viagem"],
+    "resposta": "Brasileiros fora do país podem procurar o consulado do Brasil mais próximo para pedir orientação sobre documentos, como perda ou roubo de passaporte.",
+    "documentos": ["Qualquer documento de identificação que você tenha", "Informações sobre o ocorrido (se for perda ou roubo)"],
+    "onde": "Consulado ou embaixada do Brasil mais próximo",
+    "fonte": "https://www.gov.br/mre/pt-br",
+    "verificado_em": "09/11/2026"
+  },
+  {
+    "id": 10,
+    "categoria": "Eleições",
+    "titulo": "Tirar ou regularizar o título de eleitor",
+    "palavras_chave": ["titulo de eleitor", "titulo", "eleitor", "situacao eleitoral", "regularizar titulo"],
+    "resposta": "O título de eleitor é tratado pela Justiça Eleitoral. Você pode fazer o pedido, mudar dados ou regularizar a situação pelo site do TSE ou em um cartório eleitoral.",
+    "documentos": ["Documento oficial com foto", "Comprovante de residência"],
+    "onde": "Site do TSE ou cartório eleitoral",
+    "fonte": "https://www.tse.jus.br/servicos-eleitorais",
+    "verificado_em": "14/11/2026"
+  },
+  {
+    "id": 11,
+    "categoria": "Eleições",
+    "titulo": "Justificar a ausência na votação",
+    "palavras_chave": ["justificar", "justificativa", "nao votei", "faltei eleicao", "justificar voto"],
+    "resposta": "Quem não votou pode justificar a ausência junto à Justiça Eleitoral. Consulte o site do TSE para ver as formas e os prazos.",
+    "documentos": ["Título de eleitor ou número do título", "Documento com foto"],
+    "onde": "Aplicativo e-Título, site do TSE ou cartório eleitoral",
+    "fonte": "https://www.tse.jus.br/servicos-eleitorais",
+    "verificado_em": "14/11/2026"
+  }
+]
