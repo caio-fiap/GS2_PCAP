@@ -46,7 +46,7 @@ class Assistente:
         self.base = base
         self.caminho_historico = caminho_historico
         self.caminho_csv = caminho_csv
-        self.historico - self._carregar_historico()
+        self.historico = self._carregar_historico()
         self._inicio_sessao = len(self.historico)
 
     def _carregar_historico(self):
@@ -151,9 +151,111 @@ class Assistente:
             for pontos, orientacao in alternativas:
                 print(f"  - {orientacao.titulo} ({pontos} pontos)")
 
+    def navegar(self):
+        # Navegação por categorias, com 0 para voltar
+        categorias = self.base.categorias()
+        while True:
+            print("\n--- Categorias ---")
+            for numero, categoria in enumerate(categorias, start=1):
+                print(f"  {numero}) {categoria}")
+            print("  0) Voltar")
+            escolha = ler_opcao("Escolha uma categoria: ", 0, len(categorias))
+            if escolha == 0:
+                return
+            self._navegar_categoria(categorias[escolha - 1])
 
+    def _navegar_categoria(self, categoria):
+        orientacoes = self.base.por_categoria(categoria)
+        while True:
+            print(f"\n--- {categoria} ---")
+            for numero, o in enumerate(orientacoes, start=1):
+                print(f"  {numero}) {o.titulo}")
+            print("  0) Voltar")
+            escolha = ler_opcao("Escolha uma orientação: ", 0, len(orientacoes))
+            if escolha == 0:
+                return
+            inicio = time.time()
+            orientacao = orientacoes[escolha - 1]
+            orientacao.exibir()
+            tempo = round(time.time() - inicio, 1)
+            ajudou = ler_sim_nao("\nEssa orientação respondeu sua dúvida? (s/n): ")
+            self.registrar("categoria", orientacao.titulo, orientacao.id, True, ajudou, 1, tempo)
 
+    def indicadores(self):
+        # Calcula os indicadores a partir do histórico e devolve um dicionário.
+        total = len(self.historico)
+        if total == 0:
+            return None
+        encontrados = [a for a in self.historico if a.get("encontrou")]
+        ajudaram = [a for a in self.historico if a.get("ajudou")]
+        notas = [a["nota_facilidade"] for a in self.historico if isinstance(a.get("nota_facilidade"), int)]
+        sem_solucao = []
+        for a in self.historico:
+            if not (a.get("encontrou") and a.get("ajudou")):
+                if a.get("pergunta") and a["pergunta"] not in sem_solucao:
+                    sem_solucao.append(a["pergunta"])
+        return {
+            "total": total,
+            "encontrada_pct": 100 * len(encontrados) / total,
+            "acerto_pct": 100 * len(ajudaram) / total,
+            "tempo_medio": (sum(a.get("tempo_segundos", 0) for a in encontrados) / len(encontrados)) if encontrados else None,
+            "tentativas_medias": sum(a.get("tentativas", 1) for a in self.historico) / total,
+            "facilidade": (sum(notas) / len(notas)) if notas else None,
+            "sem_solucao": sem_solucao,
+        }
 
+    def mostrar_indicadores(self):
+        dados = self.indicadores()
+        print("\n--- Indicadores ---")
+        if dados is None:
+            print("Ainda não há atendimentos registrados.")
+            return
+        print(f"Atendimentos registrados: {dados['total']}")
+        print(f"Resposta encontrada: {dados['encontrada_pct']:.0f}%")
+        print(f"Taxa de acerto (ajudou): {dados['acerto_pct']:.0f}%")
+        if dados["tempo_medio"] is not None:
+            print(f"Tempo médio para encontrar: {dados['tempo_medio']:.1f} s")
+        else:
+            print("Tempo médio para encontrar: sem dados")
+        print(f"Tentativas por atendimento: {dados['tentativas_medias']:.1f}")
+        if dados["facilidade"] is not None:
+            print(f"Facilidade de uso (1 a 5): {dados['facilidade']:.1f}")
+        else:
+            print("Facilidade de uso (1 a 5):  sem notas")
+        print("Dúvidas sem solução:")
+        if dados["sem_solucao"]:
+            for pergunta in dados["sem_solucao"]:
+                print(f"  - {pergunta}")
+        else:
+            print("  (nenhuma)")
+
+    def exportar_csv(self):
+        # Exporta o histórico para csv
+        if not self.historico:
+            print("Não há atendimentos para exportar.")
+            return
+        try:
+            pasta = os.path.dirname(self.caminho_csv)
+            if pasta:
+                os.makedirs(pasta, exist_ok=True)
+            with open(self.caminho_csv, "w", newline="", encoding="utf-8-sig") as arquivo:
+                escritor = csv.DictWriter(arquivo, fieldnames=CAMPOS_CSV, extrasaction="ignore", restval="")
+                escritor.writeheader()
+                escritor.writerows(self.historico)
+            print(f"{len(self.historico)} atendimento(s) exportado(s) para {self.caminho_csv}")
+        except OSError as erro:
+            print(f"Não consegui exportar o CSV ({erro}). Feche o arquivo se ele estiver aberto.")
+
+    def encerrar(self):
+        # Pede uma nota (1 a 5) para o usuário e salva tudo
+        novos = self.historico[self._inicio_sessao:]
+        if novos:
+            print("\nAntes de sair: de 1 a 5, quão fácil foi usar o assistente?")
+            nota = ler_opcao("Nota (1 a 5): ", 1, 5)
+            for atendimento in novos:
+                atendimento["nota_facilidade"] = nota
+            self._salvar_historico()
+        print("Obrigado por usar o Citizen Assist AI. Até logo!")
 
     def executar(self):
         #Menu principal.
