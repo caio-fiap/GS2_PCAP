@@ -4,7 +4,7 @@ import re
 
 AVISO = "este assistente não é um canal oficial."
 
-class Orinetacao:
+class Orientacao:
     # um registro do json
 
     def __init__(self, id, categoria, titulo, palavras_chave, resposta, documentos, onde, fonte, verificado_em):
