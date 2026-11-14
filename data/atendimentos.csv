@@ -1,0 +1,4 @@
+﻿data,origem,pergunta,orientacao_id,encontrou,ajudou,tentativas,tempo_segundos,nota_facilidade
+2026-11-14 17:13:47,pergunta,quero fazer minha carteira de identidade,1,True,False,1,0.0,
+2026-11-14 17:14:01,pergunta,quero fazer minha nova carteira de identidade nacional,1,True,False,1,0.0,
+2026-11-14 17:14:15,pergunta,cin,1,True,True,1,0.0,

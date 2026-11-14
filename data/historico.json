@@ -1,0 +1,35 @@
+[
+  {
+    "data": "2026-11-14 17:13:47",
+    "origem": "pergunta",
+    "pergunta": "quero fazer minha carteira de identidade",
+    "orientacao_id": 1,
+    "encontrou": true,
+    "ajudou": false,
+    "tentativas": 1,
+    "tempo_segundos": 0.0,
+    "nota_facilidade": 3
+  },
+  {
+    "data": "2026-11-14 17:14:01",
+    "origem": "pergunta",
+    "pergunta": "quero fazer minha nova carteira de identidade nacional",
+    "orientacao_id": 1,
+    "encontrou": true,
+    "ajudou": false,
+    "tentativas": 1,
+    "tempo_segundos": 0.0,
+    "nota_facilidade": 3
+  },
+  {
+    "data": "2026-11-14 17:14:15",
+    "origem": "pergunta",
+    "pergunta": "cin",
+    "orientacao_id": 1,
+    "encontrou": true,
+    "ajudou": true,
+    "tentativas": 1,
+    "tempo_segundos": 0.0,
+    "nota_facilidade": 3
+  }
+]
