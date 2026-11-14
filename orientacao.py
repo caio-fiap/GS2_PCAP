@@ -11,7 +11,7 @@ class Orientacao:
         self.id = id
         self.categoria = categoria
         self.titulo = titulo
-        self.palavras_cave = palavras_chave
+        self.palavras_chave = palavras_chave
         self.resposta = resposta
         self.documentos = documentos
         self.onde = onde
