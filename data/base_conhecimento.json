@@ -119,5 +119,16 @@
     "onde": "Aplicativo e-Título, site do TSE ou cartório eleitoral",
     "fonte": "https://www.tse.jus.br/servicos-eleitorais",
     "verificado_em": "14/11/2026"
+  },
+  {
+    "id": 12,
+    "categoria": "Trabalho e benefícios",
+    "titulo": "Agendar atendimento ou consultar benefícios no Meu INSS",
+    "palavras_chave": ["inss", "meu inss", "aposentadoria", "beneficio", "agendar inss"],
+    "resposta": "O INSS tem o Meu INSS, em site e aplicativo, onde você pode consultar benefícios e pedir serviços sem sair de casa. Para atendimento presencial, é preciso agendar.",
+    "documentos": ["CPF", "Documento oficial com foto", "Conta gov.br"],
+    "onde": "Aplicativo ou site Meu INSS",
+    "fonte": "https://meu.inss.gov.br",
+    "verificado_em": "14/11/2026"
   }
 ]
