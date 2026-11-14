@@ -14,3 +14,34 @@
 ## ODS (Objetivos de Desenvolvimento Sustentável) relacionados
 - **ODS 10** → **Redução das Desigualdades**: Quem tem menos acesso a informações perde mais tempo e dinheiro com burocracias. 
 - **ODS 16** → **Paz, Justiça e Instituições Eficazes**: acesso à informação e serviços públicos mais transparentes
+
+## Como executar
+Requer apenas Python 3.8+.
+```bash
+python main.py
+```
+
+## Estrutura
+```
+GS2_PCAP/
+|-- main.py
+|-- base_conhecimento.py
+|-- assistente.py
+|-- data/
+    |-- base_conhecimento.json
+```
+
+## Fontes consultadas
+
+
+
+## Teste com usuários
+
+
+
+## Limitações
+
+
+
+## Vídeo técnico
+(link)
