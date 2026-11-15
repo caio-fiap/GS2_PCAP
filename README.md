@@ -24,11 +24,15 @@ python main.py
 ## Estrutura
 ```
 GS2_PCAP/
-|-- main.py
-|-- base_conhecimento.py
-|-- assistente.py
-|-- data/
-    |-- base_conhecimento.json
+├── main.py
+├── base_conhecimento.py
+├── assistente.py
+├── orientacao.py
+├── testes.py
+└── data/
+    ├── base_conhecimento.json
+    ├── historico.json      # gerado
+    └── atendimentos.csv    # gerado
 ```
 
 ## Regra de pontuação
@@ -45,7 +49,13 @@ A pergunta é normalizada (minúsculas, sem acentos e sem pontuações) e compar
 | 3 a 5 | Confiança **MÉDIA** |
 | Menos de 3 | "Não encontrei" e sugere outras palavras e categorias |
 
-(colocar exemplos depois)
+`buscar()` devolve uma lista de tuplas `(pontos, orientacao)` da maior para a menor pontuação. O assistente mostra a melhor orientação e até 2 alternativas com confiança mínima.
+
+**Exemplo real:** "Como tiro a segunda via do RG?" → orientação 1: `rg` (+3) + `segunda via do rg` (+3) + "segunda" no título (+1) = **7 pontos, ALTA**.
+
+**Dados pessoais:** pergunta com 8 ou mais dígitos, ou com `@`, é recusada e não é registrada.
+
+**Indicadores:** "Taxa de acerto" e "Resposta encontrada" são calculados sobre o total de atendimentos. "Tempo médio" considera só os atendimentos em que houve resposta. Um atendimento começa na primeira pergunta válida e termina ao encontrar a resposta, ou quando a pessoa digita 0 (desistência, registrada como não resolvida).
 
 ## Fontes consultadas
 Cada orientação do JSON indica sua fonte oficial. Entre elas: 
@@ -53,9 +63,13 @@ Cada orientação do JSON indica sua fonte oficial. Entre elas:
 - Receita Federal
 - Polícia Federal
 - TSE
+- INSS
 
 ## Teste com usuários
-- Pessoas testadas:
+- Pessoas testadas (quantidade):
+- Indicadores obtidos:
+- Dúvidas sem solução:
+- Melhorias feitas a partir do teste: 
 
 ## Limitações
 - A busca é por regras. Não entende sentido, só palavras. Erros de digitação não combinam, e só funcionaria se existisse uma palavra-chave com a grafia errada. 
