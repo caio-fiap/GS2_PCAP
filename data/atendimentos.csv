@@ -1,4 +1,5 @@
 ﻿data,origem,pergunta,orientacao_id,encontrou,ajudou,tentativas,tempo_segundos,nota_facilidade
-2026-11-14 17:13:47,pergunta,quero fazer minha carteira de identidade,1,True,False,1,0.0,
-2026-11-14 17:14:01,pergunta,quero fazer minha nova carteira de identidade nacional,1,True,False,1,0.0,
-2026-11-14 17:14:15,pergunta,cin,1,True,True,1,0.0,
+2026-11-18 13:11:19,pergunta,preciso tirar meu passaporte,8,True,True,1,0.0,4
+2026-11-18 13:12:08,pergunta,preciso aposentadoria,12,True,True,1,0.0,4
+2026-11-18 13:13:18,pergunta,Não votei esse ano. O que faço?,11,True,True,2,19.4,4
+2026-11-18 13:15:01,pergunta,quais documentos eu preciso para fazer carteira de trabalho,3,True,True,1,0.0,4

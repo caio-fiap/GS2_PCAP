@@ -66,10 +66,10 @@ Cada orientação do JSON indica sua fonte oficial. Entre elas:
 - INSS
 
 ## Teste com usuários
-- Pessoas testadas (quantidade):
-- Indicadores obtidos:
-- Dúvidas sem solução:
-- Melhorias feitas a partir do teste: 
+- Pessoas testadas (quantidade): 4
+- Indicadores obtidos: Resposta encontrada e Taxa de acerto 100%, tempo médio 4.8 s, tentativas por atendimento 1.2. 
+- Dúvidas sem solução: nenhuma
+- Melhorias feitas a partir do teste: adição de nova palavra chave no id 12. 
 
 ## Limitações
 - A busca é por regras. Não entende sentido, só palavras. Erros de digitação não combinam, e só funcionaria se existisse uma palavra-chave com a grafia errada. 

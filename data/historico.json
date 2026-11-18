@@ -1,35 +1,46 @@
 [
   {
-    "data": "2026-11-14 17:13:47",
+    "data": "2026-11-18 13:11:19",
     "origem": "pergunta",
-    "pergunta": "quero fazer minha carteira de identidade",
-    "orientacao_id": 1,
-    "encontrou": true,
-    "ajudou": false,
-    "tentativas": 1,
-    "tempo_segundos": 0.0,
-    "nota_facilidade": 3
-  },
-  {
-    "data": "2026-11-14 17:14:01",
-    "origem": "pergunta",
-    "pergunta": "quero fazer minha nova carteira de identidade nacional",
-    "orientacao_id": 1,
-    "encontrou": true,
-    "ajudou": false,
-    "tentativas": 1,
-    "tempo_segundos": 0.0,
-    "nota_facilidade": 3
-  },
-  {
-    "data": "2026-11-14 17:14:15",
-    "origem": "pergunta",
-    "pergunta": "cin",
-    "orientacao_id": 1,
+    "pergunta": "preciso tirar meu passaporte",
+    "orientacao_id": 8,
     "encontrou": true,
     "ajudou": true,
     "tentativas": 1,
     "tempo_segundos": 0.0,
-    "nota_facilidade": 3
+    "nota_facilidade": 4
+  },
+  {
+    "data": "2026-11-18 13:12:08",
+    "origem": "pergunta",
+    "pergunta": "preciso aposentadoria",
+    "orientacao_id": 12,
+    "encontrou": true,
+    "ajudou": true,
+    "tentativas": 1,
+    "tempo_segundos": 0.0,
+    "nota_facilidade": 4
+  },
+  {
+    "data": "2026-11-18 13:13:18",
+    "origem": "pergunta",
+    "pergunta": "Não votei esse ano. O que faço?",
+    "orientacao_id": 11,
+    "encontrou": true,
+    "ajudou": true,
+    "tentativas": 2,
+    "tempo_segundos": 19.4,
+    "nota_facilidade": 4
+  },
+  {
+    "data": "2026-11-18 13:15:01",
+    "origem": "pergunta",
+    "pergunta": "quais documentos eu preciso para fazer carteira de trabalho",
+    "orientacao_id": 3,
+    "encontrou": true,
+    "ajudou": true,
+    "tentativas": 1,
+    "tempo_segundos": 0.0,
+    "nota_facilidade": 4
   }
 ]

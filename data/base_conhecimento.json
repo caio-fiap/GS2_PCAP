@@ -113,7 +113,7 @@
     "id": 11,
     "categoria": "Eleições",
     "titulo": "Justificar a ausência na votação",
-    "palavras_chave": ["justificar", "justificativa", "nao votei", "faltei eleicao", "justificar voto"],
+    "palavras_chave": ["justificar", "justificativa", "nao votei", "nao consegui votar", "nao pude votar", "faltei eleicao", "justificar voto"],
     "resposta": "Quem não votou pode justificar a ausência junto à Justiça Eleitoral. Consulte o site do TSE para ver as formas e os prazos.",
     "documentos": ["Título de eleitor ou número do título", "Documento com foto"],
     "onde": "Aplicativo e-Título, site do TSE ou cartório eleitoral",
