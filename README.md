@@ -78,4 +78,4 @@ Cada orientação do JSON indica sua fonte oficial. Entre elas:
 - Não é um canal oficial e não substitui o atendimento do órgão responsável. 
 
 ## Vídeo técnico
-(link)
+[Vídeo](https://youtu.be/3PtSnqUd2oM)
